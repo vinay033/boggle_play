@@ -1,0 +1,22 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 20
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+development:
+  database: boggle_development
+  <<: *defaults
+
+test:
+  database: boggle_test
+  <<: *defaults
+
+production:
+  database: boggle_production
+  <<: *defaults
+
+
